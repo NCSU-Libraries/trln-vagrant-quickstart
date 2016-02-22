@@ -1,0 +1,6 @@
+node 'localhost' {
+	include 'blacklight'
+}
+
+
+

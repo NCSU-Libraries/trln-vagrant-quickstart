@@ -1,0 +1,14 @@
+{
+  "name": "ajconsta/gitsetup",
+  "version": "0.1.0",
+  "author": "ajconsta",
+  "summary": "Sets up git deploy keys for the 'vagrant' user",
+  "license": "GPL-2.0",
+  "source": "",
+  "project_page": null,
+  "issues_url": null,
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+

@@ -1,0 +1,10 @@
+This is the blacklight quick install.  Most of what you are looking for is in
+projects/trln-blacklight-quickinstall
+
+1. make sure .bashrc in this directory has the line "chruby ruby" in it at the
+end
+2. cd projects/trln-blacklight-quickstart
+3. ./init.sh 
+4. Read the README.md file there for details about how to proceed 
+
+

@@ -1,0 +1,6 @@
+# this 'hack' allows us to store a mostly-empty directory but for this
+# file.  This keeps us from accidentally committing the git repository
+# from the trln-blacklight-quickstart project into this project =)
+*
+!.gitignore
+!data/
