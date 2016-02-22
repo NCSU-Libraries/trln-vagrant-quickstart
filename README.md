@@ -1,26 +1,33 @@
 # TRLN Blacklight Provision Quickstart
 
 This project contains the setup for a
-(vagrant)[https://www.vagrantup.com/]-based box for the (TRLN Blacklight
-Quickstart)[https://github.com/NCSU-Libraries/trln-blacklight-quickstart]
-application.  It uses (puppet)[https://puppetlabs.com] as the primary
+[vagrant](https://www.vagrantup.com/)-based box for the [TRLN Blacklight
+Quickstart](https://github.com/NCSU-Libraries/trln-blacklight-quickstart)
+application.  It uses [puppet](https://puppetlabs.com) as the primary
 provisioning mechanism.  
 
 ## Usage
 
 Install vagrant and puppet on your host.  Everything was developed with the Virtualbox provider, so probably you'll want to have that available.
 
-```./go
-
-# or cd scripts; ./quickstart.sh; cd ..; vagrant up --provider=virtualbox"
+```
+./go
 ```
 
-Will install some required puppet modules and download some files that will be built into packages on the guest VM.  Then
+or
 
-```vagrant up```
+```
+cd scripts; ./quickstart.sh; cd ..; vagrant up --provider=virtualbox
+```
 
-will install and provision the virtual machine, do a ```git clone``` of the
-blacklight quickstart, and run its installation script.  The result will be a ready-to-go Blacklight installation in `/home/vagrant/projects/trln-blacklight-quickstart` (see that project's documentation for information about how to work with it).  One of the steps is compiling the latest Ruby, so be warned that it can actually take a while.  You will probably see a significant pause after the line
+Will install some required puppet modules and download some files that will be built into packages on the guest VM.  
+
+```
+vagrant up
+```
+
+installs and provisions the virtual machine, does a `git clone` of the
+blacklight quickstart, and runs its installation script.  The result will be a ready-to-go Blacklight installation in `/home/vagrant/projects/trln-blacklight-quickstart` (see that project's documentation for information about how to work with it).  One of the steps is compiling the latest Ruby, so be warned that it can actually take a while.  You will probably see a significant pause after the line
 
 ```Notice: /Stage[main]/Chruby/Exec[install ruby-install]/returns: execute successfully``` 
 
@@ -90,11 +97,13 @@ it's easy to switch between these implementations quickly.
 
 #. Why Not Just Provide a Preconfigured Vagrant Box?
 
-We could do that!  In fact it's a better idea than what this does since we
+We could do that!  We *should* do that (maybe)!  
+
+In fact it's a better idea than what this does since we
 could avoid all the package installation and compilation at the start and
 reduce the amount of time it takes to get going. 
 
-Doing that right means having more infrastructure in place than I want to
+However, doing that right means having more infrastructure in place than I want to
 assume.  We avoid having to store large binaries in the repository (for now).
 Vagrant is also not necessarily the technology we will end up going with.
 
