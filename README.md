@@ -108,5 +108,14 @@ on the guest to 8983 on the host.
     not having a configuration management infrastructure that can support such a
     project.
 
+5. **quickstart.sh fails with "Error: Could not initialize global default settings: ERROR: Failed to build gem native extension."**
+
+    Try running `sudo ./quickstart.sh` instead.
+
+6. ** `vagrant up` fails with `/sbin/mount.vboxsf: mounting failed with the error: No such device` **
+
+    Run `vagrant reload`
+
+
 All code is provided under a GPL v3 license, and is copyright North Carolina
 State University 2016.

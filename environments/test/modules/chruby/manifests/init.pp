@@ -80,7 +80,8 @@ class chruby {
 		path => "/usr/local/bin:/usr/bin:/bin:/sbin",
 		user => "vagrant", 
 		environment => ["HOME=/home/vagrant"],
-		creates => "/home/vagrant/.rubies/ruby-2.3.0"
+		creates => "/home/vagrant/.rubies/ruby-2.3.0",
+		timeout => 1800
 	}
 
 
